@@ -3,7 +3,7 @@ pragma solidity ^0.8.11;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
@@ -18,7 +18,7 @@ contract NFTVampire is Ownable, ERC721, IERC721Receiver {
     //                                          CONSTANTS
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    ERC721 immutable victimNFT;
+    IERC721Metadata immutable victimNFT;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     //                                          VARIABLES
@@ -45,7 +45,7 @@ contract NFTVampire is Ownable, ERC721, IERC721Receiver {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     constructor(
-        ERC721 _victimNFT,
+        IERC721Metadata _victimNFT,
         string memory newName,
         string memory newSymbol
     )
