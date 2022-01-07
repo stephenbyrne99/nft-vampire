@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
 
 /// @title A contract to vampire attack an NFT project
-/// @author ste.eth
+/// @author ste.eth / cherry
 /// @notice go wild. Art gud. Project Owners often bad.
 /// @dev Not finished yet - nor tested - pls if forking use with caution. Also need to gas opt.
 contract NFTVampire is Ownable, ERC721, IERC721Receiver {
