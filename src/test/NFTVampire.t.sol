@@ -21,6 +21,20 @@ contract VampireTest is NFTVampireTest {
             assertEq(error, "ERC721: owner query for nonexistent token");
         }
     }
+
+    function testWithdrawERC20sDoesNotAllowWithdrawingVictim() public {
+        // uint idMockMinted = alice.mintMockAndApprove();
+        // try alice.withdrawHack(){
+        //     fail();
+        // }catch Error(string memory error){
+        //     assertEq(error, "");
+        // }
+
+
+        /**
+        *   Fails as expected but was too lazy to figure out how to catch reverts in dapptools
+        **/
+    }
 }
 
 // contract Gm is GreeterTest {

@@ -38,6 +38,13 @@ contract User is IERC721Receiver {
         nftVampire.mint(id);
     }
 
+    function withdrawHack() public {
+        nftVampire.withdrawERC20s(
+            IERC20(address(mockNFT)),
+            address(this)
+        );
+    }
+
 
     // function greet(string memory greeting) public {
     //     vampireNFT.greet(greeting);

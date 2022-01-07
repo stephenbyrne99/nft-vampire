@@ -3,10 +3,12 @@
 **Template for Vampire Attacking NFT Projects**
 
 ## Note
-This is a work in progress and was built in evening while watching youtube. Will update when tested & optimised. May also deploy a factory which can deploy these.
+This is a work in progress and was built in evening while watching youtube. Will update when tested & optimised. Read overview below for future feature ideas.
 
 ## Overview
-Loads of great Art NFT projects have piss poor teams behind them. This is a method for a community to essentially migrate their NFT (victim) to a new vNFT (vampire). Rewards from secondary sales can then be used by the new owner to further develop the community. If interested in previous vampire attacks see [sushiswap](https://finematics.com/vampire-attack-sushiswap-explained/).
+Loads of great Art NFT projects have piss poor teams behind them. This is a method for a community to essentially migrate their NFT (victim) to a new vNFT (vampire). Rewards from secondary sales can then be used by the new owner(s) to further develop the community. Potential here also to make the NFTVampire  deployable from a through a VampireManager contract, which could function as control mechanism and function as a DAO for vNFT token holders so no single contract controls the funds.
+
+If interested in previous vampire attacks see [sushiswap](https://finematics.com/vampire-attack-sushiswap-explained/).
 
 ## Contributing
 Feel free to.
