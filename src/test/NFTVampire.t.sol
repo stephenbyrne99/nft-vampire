@@ -11,7 +11,17 @@ contract VampireTest is NFTVampireTest {
 
     function testMintVampire() public {
         uint256 idMockMinted = alice.mintMockAndApprove();
+        assert(mockNFT.ownerOf(idMockMinted)==address(alice));
         alice.mintVampire(idMockMinted);
+        assert(mockNFT.ownerOf(idMockMinted)==address(nftVampire));
+    }
+
+    function testUnlockOriginal() public {
+        uint256 idMockMinted = alice.mintMockAndApprove();
+        assert(mockNFT.ownerOf(idMockMinted)==address(alice));
+        alice.mintVampire(idMockMinted);
+        assert(mockNFT.ownerOf(idMockMinted)==address(nftVampire));
+        alice.unlockAndBurn(idMockMinted);
     }
 
     function testCantMintNonExistentToken() public {

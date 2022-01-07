@@ -34,6 +34,10 @@ contract User is IERC721Receiver {
         return id;
     }
 
+    function unlockAndBurn(uint id) public {
+        nftVampire.unlockAndBurn(id);
+    }
+
     function mintVampire(uint256 id) public {
         nftVampire.mint(id);
     }

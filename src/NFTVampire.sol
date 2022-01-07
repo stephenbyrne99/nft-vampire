@@ -69,6 +69,9 @@ contract NFTVampire is Ownable, ERC721, IERC721Receiver {
         /// Transfer NFT
         victimNFT.safeTransferFrom(msg.sender,address(this),tokenId);
 
+        /// Set owner
+        idToOwner[tokenId] = msg.sender;
+
         /// Mint vNFT
         _mint(msg.sender,tokenId);
 
@@ -83,6 +86,9 @@ contract NFTVampire is Ownable, ERC721, IERC721Receiver {
 
         /// Transfer NFT
         victimNFT.safeTransferFrom(address(this),msg.sender,tokenId);
+
+        /// Remove owner
+        idToOwner[tokenId] = address(0);
 
         /// Burn vNFT
         _burn(tokenId);
